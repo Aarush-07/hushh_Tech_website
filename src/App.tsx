@@ -1,3 +1,4 @@
+import NotFound from "./pages/not-found";
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -382,6 +383,7 @@ function App() {
             <Route path='/document-viewer' element={<DocumentViewerPage />} />
             {/* NDA Admin Page - Password protected view of all NDA agreements */}
             <Route path='/nda-admin' element={<NDAAdminPage />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </ContentWrapper>
         {showFooter && <Footer />}
